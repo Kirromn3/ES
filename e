@@ -10,6 +10,7 @@ local ESP = {
     TeamColor = true,
     Thickness = 2,
     AttachShift = 1,
+Distance = true,
     TeamMates = true,
     Players = true,
     
@@ -228,7 +229,7 @@ function boxBase:Update()
             self.Components.Name.Text = self.Name
             self.Components.Name.Color = color
             
-            self.Components.Distance.Visible = true
+            self.Components.Distance.Visible = ESP.Distance
             self.Components.Distance.Position = Vector2.new(TagPos.X, TagPos.Y + 14)
             self.Components.Distance.Text = "[ "..math.floor((cam.CFrame.p - cf.p).magnitude) .." ]"
             self.Components.Distance.Color = color
